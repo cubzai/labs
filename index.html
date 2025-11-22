@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubzAI</title>
+    <link rel="icon" href="./Cubz.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <div class="loader-title">INITIALIZING CUBZ AI</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <div class="loader-percent">0%</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <img src="./Cubz.png" alt="Logo" style="width:24px; height:24px; object-fit:contain;">
+                CubzAI
+            </a>
+            <div class="nav-links">
+                <div class="nav-active-pill"></div>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#founders" class="nav-link">Founders</a>
+                <a href="#vision" class="nav-link">Research</a>
+            </div>
+            <button class="join-btn" data-modal-open>Join Waitlist</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-wrap">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="./Cubz.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content-lower">
+            <div class="hero-text-wrapper">
+                <h1 class="hero-title">
+                    <span class="line">Cubz<span
+                            style="color: var(--primary); text-shadow: 0 0 40px rgba(210,255,0,0.3);">AI</span></span>
+                    <span class="line indent"></span>
+                </h1>
+                <div class="hero-details">
+                    <p>Be Human Build AI <br> Understand, Edit, Automate your AI just like that ...</p>
+                    <div class="hero-btns">
+                        <button class="primary-btn" data-modal-open>
+                            Get Early Access
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        <button class="text-link">Read the Whitepaper</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>NEURAL ARCHITECTURE</span><span class="dot">•</span>
+                <span>QUANTUM READY</span><span class="dot">•</span>
+                <span>ZERO LATENCY</span><span class="dot">•</span>
+                <span>EDGE COMPUTING</span><span class="dot">•</span>
+            </div>
+            <div class="marquee-content">
+                <span>NEURAL ARCHITECTURE</span><span class="dot">•</span>
+                <span>QUANTUM READY</span><span class="dot">•</span>
+                <span>ZERO LATENCY</span><span class="dot">•</span>
+                <span>EDGE COMPUTING</span><span class="dot">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features (Bento Grid) -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">System Capabilities</span>
+                <h2>Core Features</h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- 1. Clone Model -->
+                <div class="bento-card large" data-cursor-magnetic>
+                    <div class="card-bg-media">
+                        <img src="./X.jpg" alt="Clone Model">
+                    </div>
+                    <div class="card-border-glow"></div>
+                    <div class="card-content">
+                        <div class="card-meta">REPLICATION</div>
+                        <h3>Clone Model</h3>
+                        <p>Instantly replicate model architecture and weights for localized fine-tuning or sandbox
+                            testing environments.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Chat / Talk -->
+                <div class="bento-card">
+                    <div class="card-border-glow"></div>
+                    <div class="card-bg-media">
+                        <img src="./clone.jpg" alt="Clone Model">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">INTERACTION</div>
+                        <h3>Chat / Talk</h3>
+                        <p>Seamless voice and text interface to interact directly with your active models in real-time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Analyze Security -->
+                <div class="bento-card">
+                    <div class="card-border-glow"></div>
+                    <div class="card-bg-media">
+                        <img src="./analyze.jpg" alt="Clone Model">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">AUDIT</div>
+                        <h3>Analyze Security</h3>
+                        <p>Detect bias, evaluate strategy, and scan for vulnerabilities with automated red-teaming
+                            tools.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Neuron Editor -->
+                <div class="bento-card large">
+                    <div class="card-bg-media">
+                        <img src="./flow.jpg" alt="Neuron Editor">
+                    </div>
+                    <div class="card-border-glow"></div>
+                    <div class="card-content">
+                        <div class="card-meta">VISUALIZATION</div>
+                        <h3>Neuron Editor</h3>
+                        <p>Zero-training interventions. Visually edit specific neuron activations to adjust model
+                            behavior on the fly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="features" id="founders">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="badge">Team Epic</span>
+                <h2>"Our Founders are ...</h2>
+            </div>
+            <div class="founders-grid">
+                <div class="founder-card" onclick="toggleFounder(this)">
+                    <div class="founder-img-wrap">
+                        <img src="./google.png" class="founder-img" alt="Founder 1">
+                        <div class="founder-overlay"></div>
+                    </div>
+                    <div class="founder-info">
+                        <div class="founder-header">
+                            <h3>Google</h3>
+                            <span class="role">VRP AWARD</span>
+                        </div>
+                        <div class="founder-hidden-details">
+                            <p>"Google VRP Tiger Award, recognized for exceptional, high-impact security research."</p>
+                            <div class="founder-stats">
+                                <!-- <div><span>Patents</span><strong>12</strong></div> -->
+                                <div><span>Year </span><strong> 2023</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="expand-btn">+</button>
+                </div>
+                <div class="founder-card" onclick="toggleFounder(this)">
+                    <div class="founder-img-wrap">
+                        <img src="./microsoft.png" class="founder-img" alt="Founder 2">
+                        <div class="founder-overlay"></div>
+                    </div>
+                    <div class="founder-info">
+                        <div class="founder-header">
+                            <h3>Microsoft</h3>
+                            <span class="role">AI Winner</span>
+                        </div>
+                        <div class="founder-hidden-details">
+                            <p>"Azure AI Future Hackathon Winner, Most Impressive AI Product"</p>
+                            <div class="founder-stats">
+                                <!-- <div><span>Papers</span><strong>24</strong></div> -->
+                                <div><span>Year </span><strong> 2022</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="expand-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Galaxy Effect -->
+    <footer class="future-footer">
+        <!-- Background Container -->
+        <div id="galaxy-footer"></div>
+
+        <!-- Content (zIndex 2) -->
+        <div class="parallax-text-wrap">
+            <div class="parallax-text"></div>
+        </div>
+
+        <div class="container footer-content-relative">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="#features" class="hover-link">Technology</a>
+                    <a href="#" class="hover-link">Research</a>
+                </div>
+                <div class="footer-col cta-col">
+                    <div class="magnetic-orb" data-cursor-magnetic>
+                        GET<br>ACCESS
+                    </div>
+                </div>
+                <div class="footer-col social-col">
+                    <h4>Social</h4>
+                    <a href="#" class="hover-link">GitHub</a>
+                    <a href="#" class="hover-link">LinkedIn</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 CubzAI Inc.</span>
+            <span>Privacy Policy</span>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Join Button -->
+    <div class="join-btn-mobile" data-modal-open>+</div>
+
+    <!-- Modal -->
+    <div class="modal-backdrop" id="waitlist-modal">
+        <div class="modal-glass">
+            <button class="close-modal">&times;</button>
+            <div class="modal-content">
+                <h3>Join the Revolution</h3>
+                <p>Secure your spot for the CubzAI public beta.</p>
+                <div class="input-group"><input type="email" placeholder="Enter your email"></div>
+                <button class="submit-btn">Request Access</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- OGL Library - MUST BE BEFORE script.js -->
+    <script src="https://unpkg.com/ogl"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
