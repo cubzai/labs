@@ -243,7 +243,7 @@
                     <a href="#" class="hover-link">Research</a>
                 </div>
                 <div class="footer-col cta-col">
-                    <div class="magnetic-orb" data-cursor-magnetic>
+                    <div class="magnetic-orb" data-cursor-magnetic data-modal-open>
                         GET<br>ACCESS
                     </div>
                 </div>
@@ -270,13 +270,47 @@
         <div class="modal-glass">
             <button class="close-modal">&times;</button>
             <div class="modal-content">
-                <h3>Join the Revolution</h3>
-                <p>Secure your spot for the CubzAI public beta.</p>
-                <div class="input-group"><input type="email" placeholder="Enter your email"></div>
-                <button class="submit-btn">Request Access</button>
+                <!-- VIEW 1: The Form (Visible by default) -->
+                <div id="modal-form-view">
+                    <h3>Join the Revolution</h3>
+                    <p>Secure your spot for the CubzAI public beta.<br><br></p>
+
+                    <form id="waitlist-form"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSddTtKkAtnVT9hAqN7qt8L4823mKrEFyfoK7zSnd1H7v-if1Q/formResponse"
+                        method="POST" target="hidden_iframe">
+
+                        <div class="input-group">
+                            <input type="email" name="entry.1208966013" placeholder="Enter your email" required>
+                        </div>
+
+                        <br>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Request Access<br></span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- VIEW 2: Success Card (Hidden by default) -->
+                <div id="modal-success-view" style="display: none;">
+                    <div class="success-icon-wrapper">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                    </div>
+                    <h3>You're In!</h3>
+                    <p>Thanks for joining. We've secured your spot in the queue.<br><br></p>
+                    <button class="submit-btn success-close-btn">
+                        Got it
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- REQUIRED: Hidden iframe to catch the Google Form response silently -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

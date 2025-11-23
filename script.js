@@ -206,3 +206,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (close) close.addEventListener('click', () => modal.classList.remove('active'));
     window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('waitlist-form');
+    const formView = document.getElementById('modal-form-view');
+    const successView = document.getElementById('modal-success-view');
+    const successCloseBtn = document.querySelector('.success-close-btn');
+    const modal = document.getElementById('waitlist-modal');
+
+    if (form) {
+        form.addEventListener('submit', () => {
+            // Optional: Change button text to "Processing..."
+            const btnText = form.querySelector('button span');
+            if (btnText) btnText.textContent = 'Processing...';
+
+            // Wait 800ms for "fake" processing, then switch views
+            setTimeout(() => {
+                formView.style.display = 'none';
+                successView.style.display = 'block';
+            }, 800);
+        });
+    }
+
+    // Allow the "Got it" button to close the modal and reset everything
+    if (successCloseBtn) {
+        successCloseBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+
+            // Reset view after modal closes (so it looks fresh next time)
+            setTimeout(() => {
+                successView.style.display = 'none';
+                formView.style.display = 'block';
+                form.reset();
+                if (form.querySelector('button span')) {
+                    form.querySelector('button span').textContent = 'Request Access';
+                }
+            }, 300);
+        });
+    }
+});
