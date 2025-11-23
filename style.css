@@ -511,19 +511,19 @@ body.scrolled .glass-nav {
 
 .bento-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(115, 255, 45, 0.27);
 }
 
 .card-bg-media {
     position: absolute;
     inset: 0;
-    opacity: 0.3;
+    opacity: 0.9;
     z-index: 0;
     transition: opacity 0.5s;
 }
 
 .bento-card:hover .card-bg-media {
-    opacity: 0.6;
+    opacity: 0.99;
 }
 
 .card-bg-media img {
@@ -786,7 +786,7 @@ body.scrolled .glass-nav {
     height: 100%;
     z-index: -1;
 
-    background-image: url('footer.avif');
+    background-image: url('./asset/footer.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
