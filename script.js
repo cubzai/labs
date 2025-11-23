@@ -151,17 +151,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Galaxy Footer
     try { initGalaxyFooter(); } catch (e) { console.error(e); }
-    // 3. Custom Cursor
-    const dot = document.getElementById('cursor-dot');
-    const outline = document.getElementById('cursor-outline');
-    window.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        requestAnimationFrame(() => {
-            if (dot) dot.style.transform = `translate(${x}px, ${y}px)`;
-            if (outline) outline.animate({ transform: `translate(${x}px, ${y}px)` }, { duration: 500, fill: "forwards" });
-        });
-    });
+    // // 3. Custom Cursor
+    // const dot = document.getElementById('cursor-dot');
+    // const outline = document.getElementById('cursor-outline');
+    // window.addEventListener('mousemove', (e) => {
+    //     const x = e.clientX;
+    //     const y = e.clientY;
+    //     requestAnimationFrame(() => {
+    //         if (dot) dot.style.transform = `translate(${x}px, ${y}px)`;
+    //         if (outline) outline.animate({ transform: `translate(${x}px, ${y}px)` }, { duration: 500, fill: "forwards" });
+    //     });
+    // });
 
     // 4. Nav Pill
     const navLinks = document.querySelectorAll('.nav-link');
